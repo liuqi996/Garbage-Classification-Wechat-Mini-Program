@@ -28,3 +28,10 @@ image[class*="gif-"] {
   width: 80px;
   height: 80px;
 }
+.four{
+  display: flex;
+}
+.four image{
+  width: 25%;
+  height:312.6rpx;
+}

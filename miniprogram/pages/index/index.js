@@ -70,7 +70,7 @@ Page({
 
   onShareTimeline: function () {
     return {
-        title: '赶紧来体验“北京垃圾分类指南”小程序吧！',
+        title: '赶紧来体验“垃圾分类知识”小程序吧！',
         imageUrl:'',
         query: '',
     }

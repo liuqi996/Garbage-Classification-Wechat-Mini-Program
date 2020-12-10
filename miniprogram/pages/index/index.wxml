@@ -85,8 +85,8 @@
 <view class="margin-left margin-right margin-bottom">卫生纸、饮料杯、塑料袋、纸尿裤、污染纸张、餐盒、大棒骨、陶瓷碎片等。</view>
 </view>
 
-<view class="text-center">-本小程序基于Color UI 开发-</view>
-<view class="margin-left margin-right text-red">温馨提示：本小程序所列出的垃圾分类的信息仅供参考，请以权威信息为准。</view>
+<view class="text-center ui">-本小程序基于Color UI 开发-</view>
+<view class="margin-left margin-right text-red tips">温馨提示：本小程序所列出的垃圾分类的信息仅供参考，请以权威信息为准。</view>
 
 <!--<view bindtap='resume'>
   <text class="add_icon">个人中心➤</text>

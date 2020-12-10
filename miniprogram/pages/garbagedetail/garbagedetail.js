@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    animationData: {}
 
   },
 
@@ -19,6 +20,7 @@ Page({
       kind:options.kind,
       property:options.property
     })
+    console.log(this.data.name)
     var that=this;
     setTimeout(function() {
       that.setData({
@@ -41,6 +43,26 @@ Page({
     wx.setNavigationBarTitle({
       title: this.data.name
     })
+
+    var animation = wx.createAnimation({
+      duration: 500,
+      timingFunction: 'ease',
+    })
+    this.animation = animation
+    var next = true;
+    //连续动画关键步骤
+    setInterval(function () {
+      if (next) {
+        this.animation.scale(0.8).step()   
+        next = !next;
+      } else {
+        this.animation.scale(1).step()
+        next = !next;
+      }
+      this.setData({
+        animationData: animation.export()
+      })
+    }.bind(this), 500)
   },
 
   /**
@@ -74,7 +96,15 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (res) {
+    /*if (res.from === 'button') {
+      // 来自页面内转发按钮
+    }*/
+    return {
+      title: this.data.name + '是' + this.data.kind+'，你知道吗？',
+      //title: '垃圾分类知识',
+      desc: '垃圾分类怕分错？点我一查就知道！',
+      path: "/pages/garbagedetail/garbagedetail?name=" + this.data.name + '&kind=' + this.data.kind + '&property=' + this.data.property
+     }
   }
 })

@@ -25,3 +25,9 @@
   box-shadow: 0 1px 0 2px #ebebeb;
   z-index:100;
 }
+.ui{
+  margin-top:20px;
+}
+.tips{
+  margin-top: 10px;
+}
