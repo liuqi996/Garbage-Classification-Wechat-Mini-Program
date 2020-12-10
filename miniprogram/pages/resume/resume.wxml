@@ -1,0 +1,4 @@
+<!--pages/resume/resume.wxml-->
+<text>pages/resume/resume.wxml</text>
+<view bindtap="login">登录</view>
+<view>{{openid}}</view>
